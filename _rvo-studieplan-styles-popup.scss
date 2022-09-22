@@ -1,0 +1,82 @@
+&-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 101;
+    max-width: $content-width;
+    padding: .10em 1em 1em 1em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $color__accent-blue;
+
+    @media only screen and (min-width: $query__small) {
+      margin-top: 3em;
+      padding: 2em 3em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    a {
+      color: black;
+
+      &:active,
+      &:visited,
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  &__btn {
+    font-weight: bold;
+    border: 0;
+    margin: 1em 0;
+    padding: .75em 1em;
+    background-color: $color__purple;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: white;
+      color: $color__purple;
+
+      transition: all .2s ease-in;
+    }
+
+    &-open {
+     margin: 0;
+     padding: 0.5em 1em;
+     cursor: pointer;
+     height: 100%;
+     background-color: $color__purple;
+     color: white;
+
+     &:hover {
+      background-color: white;
+      color: $color__purple;
+      }
+    }
+  }
+
+  &_hidden {
+    display: none;
+  }
+}

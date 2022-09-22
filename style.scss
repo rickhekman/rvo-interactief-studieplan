@@ -1,0 +1,15 @@
+@import 'rvo-studieplan-styles-global';
+
+.rvstdpln {
+  @import 'rvo-studieplan-styles-root';
+  @import 'rvo-studieplan-styles-elements';
+  @import 'rvo-studieplan-styles-main';
+  @import 'rvo-studieplan-styles-header';
+  @import 'rvo-studieplan-styles-module';
+  @import 'rvo-studieplan-styles-navigation-content';
+  @import 'rvo-studieplan-styles-navigation-filter';
+  @import 'rvo-studieplan-styles-navigation-header';
+  @import 'rvo-studieplan-styles-popup';
+  @import 'rvo-studieplan-styles-reset';
+  @import 'rvo-studieplan-styles-timeline';
+}
