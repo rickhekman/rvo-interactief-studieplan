@@ -1,0 +1,36 @@
+.rvstdpln-main {
+  position: relative;
+}
+
+// Filters are active.
+&_active-filters {
+
+  // Hide sticky scroll nav header.
+  // .rvstdpln-content__header {
+  //   display: none !important;
+  // }
+
+  // Hide timeline styling.
+  .rvstdpln-timeline__intro-title::before,
+  .rvstdpln-timeline__intro-title::after,
+  .rvstdpln-timeline__intro-subtitle::after,
+  .rvstdpln-timeline__intro-content::after,
+  .rvstdpln-module__title::before,
+  .rvstdpln-module__content::before {
+    content: none;
+  }
+
+  // Hide intro content.
+  .rvstdpln-timeline__intro-content {
+    display: none !important;
+  }
+
+  .rvstdpln-timeline__intro-subtitle {
+    display: none;
+  }
+
+   // Alway hide fase 3.
+  // .rvstdpln-timeline__intro:last-child {
+  //   display: none !important;
+  // }
+}

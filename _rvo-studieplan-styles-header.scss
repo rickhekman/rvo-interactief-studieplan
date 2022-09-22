@@ -1,0 +1,92 @@
+&__branding {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  z-index: 7;
+
+  img {
+    width: 174.3px;
+    margin-left: 140px;
+
+    @media only screen and (min-width: $query__small) {
+      margin-left: 200px;
+      width: auto;
+    }
+  }
+}
+
+&__header {
+  background-image: url("rvstdpln-img-hero.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 7;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 125px); // Min RO header.
+    max-width: $container-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
+
+    @media only screen and (min-width: $query__medium) {
+      padding: 0 3em;
+    }
+
+    @media only screen and (min-width: $query__wide) {
+      padding: 0;
+    }
+  }
+}
+
+&__title {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  @media only screen and (min-width: $query__small) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    padding-top: 0 !important;
+  }
+}
+
+&__header-scroll {
+  align-self: center;
+  margin-top: auto;
+  position: relative;
+  padding-bottom: 1em;
+
+  @media only screen and (min-width: $query__small) {
+    padding-bottom: 2em;
+  }
+
+  svg {
+    fill: $color__purple;
+
+    &:hover {
+      fill: white;
+      transition: fill .2s ease-in;
+    }
+
+    path {
+      fill: none;
+      stroke: white;
+    }
+
+    &:hover {
+      path {
+        fill: none;
+        stroke: $color__purple;
+        transition: stroke .2s ease-in;
+      }
+    }
+  }
+}

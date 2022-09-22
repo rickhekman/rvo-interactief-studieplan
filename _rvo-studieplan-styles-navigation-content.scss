@@ -1,0 +1,103 @@
+&-content {
+
+  &__header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    z-index: 6;
+    background-color: $color__bright-blue;
+  }
+}
+
+&-nav {
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+
+  @media only screen and (max-width: $query__small) {
+    display: none;
+  }
+
+  @media only screen and (min-width: $query__medium) {
+    padding: 0 3em;
+  }
+
+  @media only screen and (min-width: $query__wide) {
+    padding: 0;
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media only screen and (min-width: $query__small) {
+      flex-wrap: nowrap;
+    }
+
+    &-title {
+      margin: 0;
+      font-weight: bold;
+      font-size: 1em;
+
+      @media only screen and (min-width: $query__wide) {
+        font-size: 1.17em;
+      }
+
+      a {
+        color: $color__purple;
+        text-decoration: none;
+        display: block;
+        padding: .5em;
+
+        @media only screen and (min-width: $query__wide) {
+          padding: .5em 1em;
+        }
+
+        &.active {
+          background-color: $color__purple;
+          color: white;
+        }
+
+        &::after {
+          position: absolute;
+          content: '';
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+
+    &-item {
+      padding-left: 0 !important;
+      position: relative;
+      flex-basis: 80%;
+      background-color: white;
+
+      @media only screen and (min-width: $query__small) {
+        flex-basis: 33.333%;
+      }
+    }
+
+    &-item:not(:last-child) {
+      margin-bottom: 1em;
+
+      @media only screen and (min-width: $query__small) {
+        margin-bottom: 0;
+        margin-right: 1em;
+      }
+    }
+
+    &-item:last-child {
+        flex-basis: auto;
+    }
+  }
+}

@@ -1,0 +1,231 @@
+&-timeline {
+
+  @media only screen and (min-width: $query__medium) {
+    margin-top: 5em;
+  }
+
+  &__introduction,
+  &__intro {
+    max-width: 30em !important;
+    margin-left: 0 !important; //Responsive fix
+    margin-right: auto !important; //Responsive fix
+    padding: 0 1em 0 2.5em !important;
+
+
+    @media only screen and (min-width: $query__medium) {
+      padding: 0 3em !important;
+    }
+
+    @media only screen and (min-width: $query__extra-wide) {
+      max-width: $container-width !important;
+      margin-left: auto !important;
+      padding: 0 !important;
+    }
+
+    &-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: $content-width;
+      position: relative;
+
+      @media only screen and (min-width: $query__small) {
+        flex-wrap: nowrap;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 110%;
+        width: 2px;
+        background-color: $color__purple;
+        margin-left: -1.7em;
+        z-index: -1;
+      }
+
+      ul {
+        list-style: disc !important;
+        padding-left: 1em !important;
+        line-height: 1.5;
+
+        li {
+          display: list-item !important;
+        }
+      }
+
+      &-start {
+        font-weight: bold;
+        color: $color__purple;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+    &-title {
+      max-width: $content-width;
+      padding-top: 2em;
+      font-size: 1.25em !important;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: -1.56em;
+        margin-right: 0.85em;
+        width: .5em;
+        height: .5em;
+        border-radius: 50%;
+        background-color: $color__purple;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 76%;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 2px;
+        background-color: $color__purple;
+        margin-left: -1.36em;
+        z-index: -1;
+      }
+    }
+
+    &-subtitle {
+      margin-top: .25em;
+      margin-bottom: .5em;
+      font-size: 2em !important;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 160%;
+        width: 2px;
+        background-color: $color__purple;
+        margin-left: -.85em;
+        z-index: -1;
+      }
+    }
+
+    &-info {
+
+      p {
+        font-size: 1.5rem !important;
+      }
+
+      a {
+        color: black;
+
+        &:hover,
+        &:active,
+        &:visited {
+          color: black;
+        }
+      }
+
+      ul {
+        li {
+          list-style: disc !important;
+          padding-left: 0 !important;
+        }
+      }
+    }
+
+    &-icon {
+      width: 197px;
+      height: 197px;
+    }
+  }
+
+  .rvstdpln-timeline__intro:not(:first-child) {
+    margin-top: 2em !important; //Responsive fix
+
+    h2 {
+      border-top: 1px solid $color__purple;
+      width: 80%;
+    }
+  }
+
+  .rvstdpln-timeline__intro:first-child {
+    @media only screen and (max-width: $query__small) {
+      padding-left: 1em;
+    }
+  }
+
+  .rvstdpln-timeline__intro:last-child {
+    @media only screen and (max-width: $query__small) {
+      padding-left: 1em;
+    }
+    .rvstdpln-timeline__intro-title {
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+
+    .rvstdpln-timeline__intro-subtitle {
+      &::after {
+        content: none;
+      }
+    }
+
+    .rvstdpln-timeline__intro-content {
+      &::after {
+        content: none;
+      }
+    }
+
+    .rvstdpln-timeline__intro-info {
+      padding-right: 1.15em;
+    }
+  }
+
+  &__content {
+    margin-top: 0;
+  }
+
+  &__week {
+    max-width: $container-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
+
+    @media only screen and (min-width: $query__medium) {
+      padding: 0 3em;
+    }
+
+    @media only screen and (min-width: $query__wide) {
+      padding: 0;
+    }
+
+    &-title {
+      color: $color__purple;
+      margin-bottom: .75em;
+    }
+
+    &-content {
+      max-width: $content-width;
+      position: relative;
+      border-bottom: 2px solid $color__light-purple;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 2px;
+        background-color: $color__purple;
+        margin-left: -1.7em;
+        z-index: -1;
+      }
+    }
+  }
+}

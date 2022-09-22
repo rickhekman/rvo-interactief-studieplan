@@ -1,0 +1,174 @@
+&-filter {
+  position: relative;
+  margin-top: 1em;
+  font-size: smaller;
+
+  @media only screen and (min-width: $query__medium) {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 3.3em;
+    z-index: 5;
+  }
+
+  @media only screen and (min-width: $query__wide) {
+    font-size: unset;
+  }
+
+  &__btn-reset {
+    border: 0;
+    font-weight: bold;
+    margin: .75em 0 .25em 0;
+    padding: 0 1em;
+    font-size: small;
+    background: $color__purple;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background: white;
+      color: $color__purple;
+      transition: all .2s ease-in;
+    }
+  }
+
+  &__wrapper {
+    background-color: white;
+    max-height: calc(100vh - 6.5em);
+    overflow-y: auto;
+
+    @media only screen and (min-width: $query__small) {
+      padding-left: 2.5em;
+      min-width: 14em;
+      max-width: 14em;
+    }
+
+    @media only screen and (min-width: $query__medium) {
+      padding-left: 0;
+      top: 5.43em;
+      position: sticky;
+      margin-right: 1em;
+    }
+
+    @media only screen and (min-width: $query__wide) {
+      margin-right: 2em;
+    }
+  }
+
+  &__content {
+    padding: 1em;
+    background-color: $color__accent-blue;
+  }
+
+  &__content:last-child {
+    padding: .5em 1em;
+  }
+
+  &__title {
+    font-size: 1.125em !important;
+    font-weight: normal;
+    color: black !important;
+    border-bottom: 3px solid white;
+    padding-bottom: .5em;
+    margin-top: .5em;
+    margin-bottom: 0;
+  }
+
+  &__menu {
+    padding: .25em 0;
+    margin: 0;
+
+    &-item {
+      font-size: .9em;
+      line-height: 1.8;
+      margin-bottom: 1px;
+      padding-left: 0 !important;
+
+      &:hover {
+        .rvstdpln-filter__menu-label {
+          text-decoration: underline;
+
+          svg * {
+            fill: black;
+          }
+        }
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    label {
+      display: block;
+      padding: 0 0 0 .3em;
+      cursor: pointer;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-right: .5em;
+        vertical-align: middle;
+      }
+    }
+
+    input:checked {
+      ~.rvstdpln-filter__menu-label {
+        background-color: $color__purple;
+        color: white;
+
+        svg * {
+          fill: white;
+        }
+      }
+    }
+  }
+
+  &__menu:not(:last-child) {
+    border-bottom: 3px solid white;
+  }
+
+  &__filterbar {
+
+    @media only screen and (min-width: $query__medium) {
+      display: none;
+    }
+
+    &-btn {
+      font-family: "RO Sans", sans-serif;
+      font-size: .85em;
+      font-weight: bold;
+      display: block;
+      width: 100%;
+      border: 0;
+      padding: .5em .75em;
+      background: $color__purple;
+      color: white;
+      cursor: pointer;
+
+      .arrow-up,
+      .arrow-down {
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        top: .25em;
+        padding-left: .25em;
+      }
+
+      .arrow-down {
+        transform: rotate(180deg);
+        top: -.1em;
+        margin-left: .25em;
+      }
+    }
+  }
+
+  &__hidden {
+    display: none;
+
+    @media only screen and (min-width: $query__medium) {
+      display: block;
+    }
+  }
+}
