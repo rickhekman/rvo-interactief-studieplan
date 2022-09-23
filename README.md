@@ -1,6 +1,6 @@
 # Leertool Interactief Studieplan - RVO academie Faculteit Klimaat & Energie
 
-This is an interactive infographic created while working for Vorm Vijf.
+This is an interactive infographic created while working for VormVijf.
 
 
 ## Infographic website
